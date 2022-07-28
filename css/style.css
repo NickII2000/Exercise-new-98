@@ -408,7 +408,8 @@ a {
 
 .calculating__choose-item_active {
     color: #fff;
-    background-color: #54ed39
+    /* background-color: #54ed39 */
+    background-color: #25a30f
 }
 
 .calculating__choose_medium {
