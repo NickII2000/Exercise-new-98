@@ -524,6 +524,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    initLocalSetting('#gender', 'calculating__choose-item_active');
+    initLocalSetting('.calculating__choose_big', 'calculating__choose-item_active');
+
     function calcTotal() {
         if (!sex || !height || !weight || !age || !ratio) {
             result.textContent = '· ···';
