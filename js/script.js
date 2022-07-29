@@ -490,7 +490,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Calc (Ex. 97)
+    // Calc (Ex. 97, 98)
 
     const result = document.querySelector('.calculating__result span');
     let sex, height, weight, age, ratio;
