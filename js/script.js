@@ -550,6 +550,10 @@ window.addEventListener('DOMContentLoaded', () => {
                 input.style.border = 'none';
             }
 
+            if (input.value.match(/\D/g)) {
+                input.value = input.value.replace(/\D/g, '');
+            }
+
             switch (input.getAttribute('id')) {
                 case 'height':
                     height = +input.value;
