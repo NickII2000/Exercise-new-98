@@ -523,7 +523,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     sex = e.target.getAttribute('id');
                 }
 
-                console.log(`ratio = ${ratio}, sex = ${sex}`);
+                console.log(`height = ${height}, weight = ${weight}, age = ${age}, sex = ${sex}, ratio = ${ratio}`);
 
                 elements.forEach(elem => {
                     elem.classList.remove(activeClass);
