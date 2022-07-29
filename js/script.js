@@ -547,9 +547,9 @@ window.addEventListener('DOMContentLoaded', () => {
             if (input.value.match(/\D/g)) {
                 input.style.border = '1px solid red';
                 // моя вставка
+                input.value = input.value.replace(/\D/g, '');
                 setTimeout(() => {
                     input.style.border = 'none';
-                    input.value = input.value.replace(/\D/g, '');
                 }, 300);
                 //
             } else {
