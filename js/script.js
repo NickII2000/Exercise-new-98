@@ -549,11 +549,12 @@ window.addEventListener('DOMContentLoaded', () => {
             } else {
                 input.style.border = 'none';
             }
-
+            // моя вставка
             if (input.value.match(/\D/g)) {
                 input.value = input.value.replace(/\D/g, '');
+                setTimeout(() => input.style.border = 'none', 300);
             }
-
+            //
             switch (input.getAttribute('id')) {
                 case 'height':
                     height = +input.value;
