@@ -546,32 +546,33 @@ window.addEventListener('DOMContentLoaded', () => {
 
             if (input.value.match(/\D/g)) {
                 input.style.border = '1px solid red';
-            } else {
-                input.style.border = 'none';
-            }
-            // моя вставка
-            if (input.value.match(/\D/g)) {
+                // моя вставка
+                setTimeout(() => {
+                    input.style.border = 'none', 300);
                 input.value = input.value.replace(/\D/g, '');
-                setTimeout(() => input.style.border = 'none', 300);
             }
             //
-            switch (input.getAttribute('id')) {
-                case 'height':
-                    height = +input.value;
-                    break;
-                case 'weight':
-                    weight = +input.value;
-                    break;
-                case 'age':
-                    age = +input.value;
-                    break;
-            }
+        } else {
+            input.style.border = 'none';
+        }
 
-            calcTotal();
-        });
+            switch (input.getAttribute('id')) {
+            case 'height':
+                height = +input.value;
+                break;
+            case 'weight':
+                weight = +input.value;
+                break;
+            case 'age':
+                age = +input.value;
+                break;
+        }
+
+        calcTotal();
+    });
     }
 
-    getDynamicInformation('#height');
-    getDynamicInformation('#weight');
-    getDynamicInformation('#age');
+getDynamicInformation('#height');
+getDynamicInformation('#weight');
+getDynamicInformation('#age');
 });
