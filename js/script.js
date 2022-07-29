@@ -493,9 +493,21 @@ window.addEventListener('DOMContentLoaded', () => {
     // Calc (Ex. 97)
 
     const result = document.querySelector('.calculating__result span');
-    let sex = 'female',
-        height, weight, age,
+    let sex, height, weight, age, ratio;
+
+    if (localStorage.getItem('sex')) {
+        sex = localStorage.getItem('sex');
+    } else {
+        sex = 'female';
+        localStorage.setItem('sex', 'female');
+    }
+
+    if (localStorage.getItem('ratio')) {
+        ratio = localStorage.getItem('ratio');
+    } else {
         ratio = 1.375;
+        localStorage.setItem('ratio', 1.375);
+    }
 
     function calcTotal() {
         if (!sex || !height || !weight || !age || !ratio) {
