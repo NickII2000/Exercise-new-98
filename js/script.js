@@ -524,8 +524,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    initLocalSetting('#gender', 'calculating__choose-item_active');
-    initLocalSetting('.calculating__choose_big', 'calculating__choose-item_active');
+    initLocalSetting('#gender div', 'calculating__choose-item_active');
+    initLocalSetting('.calculating__choose_big div', 'calculating__choose-item_active');
 
     function calcTotal() {
         if (!sex || !height || !weight || !age || !ratio) {
@@ -542,8 +542,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     calcTotal();
 
-    function getStaticInformation(parentSelector, activeClass) {
-        const elements = document.querySelectorAll(`${parentSelector} div`);
+    function getStaticInformation(selector, activeClass) {
+        const elements = document.querySelectorAll(selector);
 
         elements.forEach(elem => {
             elem.addEventListener('click', (e) => {
@@ -568,8 +568,8 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    getStaticInformation('#gender', 'calculating__choose-item_active');
-    getStaticInformation('.calculating__choose_big', 'calculating__choose-item_active');
+    getStaticInformation('#gender div', 'calculating__choose-item_active');
+    getStaticInformation('.calculating__choose_big div', 'calculating__choose-item_active');
 
     function getDynamicInformation(selector) {
         const input = document.querySelector(selector);
