@@ -509,6 +509,15 @@ window.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('ratio', 1.375);
     }
 
+    function initLocalSetting(selector, activeClass) {
+        const elements = document.querySelectorAll(selector);
+
+        elements.forEach(elem => {
+            elem.classList.remove(activeClass);
+        });
+
+    }
+
     function calcTotal() {
         if (!sex || !height || !weight || !age || !ratio) {
             result.textContent = '· ···';
