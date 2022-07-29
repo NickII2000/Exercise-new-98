@@ -514,6 +514,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
         elements.forEach(elem => {
             elem.classList.remove(activeClass);
+            if (elem.getAttribute('id') === localStorage.getItem('sex')) {
+                elem.classList.add(activeClass);
+            }
+            if (elem.getAttribute('data-ratio') === localStorage.getItem('ratio')) {
+                elem.classList.add(activeClass);
+            }
         });
 
     }
