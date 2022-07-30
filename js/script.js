@@ -626,3 +626,4 @@ const person = {
 
 console.log(person.userAge);
 console.log(person.userAge = 52);
+console.log(person.userAge);
