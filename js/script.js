@@ -619,8 +619,8 @@ const person = {
         return this.age;
     },
 
-    set userAge(n) {
-        this.age = n;
+    set userAge(num) {
+        this.age = num;
     },
 };
 
